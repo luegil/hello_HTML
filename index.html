@@ -1,17 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
 <head>
-  <title>title_hello</title>
-  <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
 </head>
+
 <body>
-  <h1><a href="index.html">Hello HTML</a></h1>
-  <p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/7T7r_oSp0SE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </p>
-    <ol>
-      <li><a href="1.html">다른HTML파일</a></li>
-      <li><a href="https://www.naver.com/" target="_blank">네이버링크</a></li>
-    </ol>
+    <input type="button" value="hello html2canvas" onclick = "
+        html2canvas(document.querySelector('#capture')).then(canvas => {
+            document.body.appendChild(canvas)
+        });
+    ">
+    <div id="capture" style="padding: 10px; background:#f5da55">
+        <h4 style="color: #000; ">Hello world!</h4>
+    </div>
+
 </body>
+
 </html>
